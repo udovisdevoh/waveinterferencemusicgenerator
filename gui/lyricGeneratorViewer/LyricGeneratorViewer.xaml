@@ -1,0 +1,7 @@
+﻿<UserControl x:Class="WaveBuilder.LyricGeneratorViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    MinHeight="384" MinWidth="512">
+    <StackPanel Name="stackTrackList">
+    </StackPanel>
+</UserControl>

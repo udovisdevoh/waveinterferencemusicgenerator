@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="WaveBuilder.TrackViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    MinHeight="10" MinWidth="512">
+    <Border>
+        <StackPanel Name="stackPanelTrack" Orientation="Horizontal">
+            <ComboBox Name="metaRiffPackNameListBox" MinWidth="160" MaxWidth="128" SelectionChanged="MetaRiffPackNameChangedHandler"/>
+            <Separator/>
+        </StackPanel>
+    </Border>
+</UserControl>

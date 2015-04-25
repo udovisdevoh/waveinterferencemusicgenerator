@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="WaveBuilder.LyricTrackViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    MinHeight="10" MinWidth="512">
+    <Border BorderBrush="Black" BorderThickness="2">
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" MinWidth="118" MaxWidth="128">
+                <TextBlock>Desired themes</TextBlock>
+                <StackPanel Name="stackPanelDesiredThemeSelectBoxes" Orientation="Vertical">
+                </StackPanel>
+                <Separator/>
+                <TextBlock>Undesired themes</TextBlock>
+                <StackPanel Name="stackPanelUndesiredThemeSelectBoxes" Orientation="Vertical">
+                </StackPanel>
+            </StackPanel>
+            <Separator/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <GroupBox Header="Intensity" Grid.Row="0">
+                    <StackPanel Name="stackPanelIntensityFaderTrack" Orientation="Horizontal">
+                        <Slider Name="sliderIntensityMaster" Maximum="1" Minimum="0" Orientation="Vertical" Height="96" Width="32" Thumb.DragCompleted="SliderIntensityMasterDragCompletedHandler" />
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Character count" Grid.Row="1">
+                    <StackPanel Name="stackPanelCharCountFaderTrack" Orientation="Horizontal">
+                        <Slider Name="sliderCharCountMaster" Maximum="128" Minimum="16" Orientation="Vertical" Height="96" Width="32" Thumb.DragCompleted="SliderCharCountMasterDragCompletedHandler" />
+                    </StackPanel>
+                </GroupBox>
+            </Grid>
+
+        </StackPanel>
+    </Border>
+</UserControl>

@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<song>
+  <riffPack Tempo="120" />
+  <lyrics />
+  <lyricsSongFactoryCollection>
+    <lyricSongFactory BarCount="29" BarCountPerChorus="2">
+      <barInfo>
+        <bar Intensity="0.2470588" LetterCount="26" />
+        <bar Intensity="0.2352941" LetterCount="26" />
+        <bar Intensity="0.2235294" LetterCount="26" />
+        <bar Intensity="0.2235294" LetterCount="26" />
+        <bar Intensity="0.8352941" LetterCount="26" />
+        <bar Intensity="1" LetterCount="26" />
+        <bar Intensity="0.8117647" LetterCount="26" />
+        <bar Intensity="1" LetterCount="26" />
+        <bar Intensity="0.1647059" LetterCount="26" />
+        <bar Intensity="0.1764706" LetterCount="26" />
+        <bar Intensity="0.1764706" LetterCount="26" />
+        <bar Intensity="0.1764706" LetterCount="26" />
+        <bar Intensity="0" LetterCount="26" />
+        <bar Intensity="0" LetterCount="26" />
+        <bar Intensity="0" LetterCount="26" />
+        <bar Intensity="0" LetterCount="26" />
+        <bar Intensity="0.7882353" LetterCount="26" />
+        <bar Intensity="1" LetterCount="26" />
+        <bar Intensity="0.8470588" LetterCount="26" />
+        <bar Intensity="1" LetterCount="26" />
+        <bar Intensity="0.8" LetterCount="26" />
+        <bar Intensity="1" LetterCount="26" />
+        <bar Intensity="0.7882353" LetterCount="26" />
+        <bar Intensity="1" LetterCount="26" />
+        <bar Intensity="0" LetterCount="26" />
+        <bar Intensity="0" LetterCount="26" />
+        <bar Intensity="0" LetterCount="26" />
+        <bar Intensity="0" LetterCount="26" />
+        <bar Intensity="0" LetterCount="26" />
+      </barInfo>
+      <themeList>
+        <theme>nature</theme>
+        <theme>love</theme>
+        <theme>food</theme>
+      </themeList>
+      <themeBlackList>
+        <theme>money</theme>
+        <theme>sex</theme>
+        <theme>gangsta</theme>
+        <theme>fight</theme>
+        <theme>death</theme>
+        <theme>gore</theme>
+      </themeBlackList>
+    </lyricSongFactory>
+  </lyricsSongFactoryCollection>
+  <predefinedGenerator BarCount="29" IsOverrideScale="True" IsOverrideTempo="True" Modulation="0.15" ScaleName="minorPentatonic" Tempo="120" LyricsToMusicPhase="0">
+    <predefinedGeneratorTrack MetaRiffPackName="MeditativeWest">
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+    </predefinedGeneratorTrack>
+    <predefinedGeneratorTrack MetaRiffPackName="Persian">
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+    </predefinedGeneratorTrack>
+    <predefinedGeneratorTrack MetaRiffPackName="DrumQuad">
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+    </predefinedGeneratorTrack>
+    <predefinedGeneratorTrack MetaRiffPackName="DrumSnareQuad">
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+    </predefinedGeneratorTrack>
+    <predefinedGeneratorTrack MetaRiffPackName="BassSynth">
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+    </predefinedGeneratorTrack>
+    <predefinedGeneratorTrack MetaRiffPackName="DrumBassQuad">
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="True" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+      <barInfo isOn="False" />
+    </predefinedGeneratorTrack>
+  </predefinedGenerator>
+</song>

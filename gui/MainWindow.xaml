@@ -1,0 +1,156 @@
+﻿<Window x:Class="WaveBuilder.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MetaKaraokizer"
+    WindowState="Maximized"
+    MinWidth="800" MinHeight="480"
+    Height="800" Width="480">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Close" Executed="FileExitHandler"/>
+        <CommandBinding Command="ApplicationCommands.New" Executed="GeneratorNewHandler"/>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="FileOpenHandler"/>
+        <CommandBinding Command="ApplicationCommands.SaveAs" Executed="FileSaveAsHandler"/>
+    </Window.CommandBindings>
+    <DockPanel>
+        <Menu Name="mainMenu" DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open" Command="ApplicationCommands.Open"/>
+                <MenuItem Header="Save As" Command="ApplicationCommands.SaveAs"/>
+                <MenuItem Header="E_xit" Command="ApplicationCommands.Close"/>
+            </MenuItem>
+            <MenuItem Header="_Generator">
+                <MenuItem Header="_New" Command="ApplicationCommands.New"/>
+                <Separator />
+                <MenuItem Header="_Open" Click="GeneratorOpenHandler"/>
+                <MenuItem Header="Save As" Click="GeneratorSaveAsHandler"/>
+            </MenuItem>
+            <MenuItem Header="Song">
+                <MenuItem Header="_Build" Click="SongBuildHandler" />
+                <MenuItem Header="_Play">
+                    <MenuItem Header="As song" Click="SongPlayAsSongHandler"/>
+                    <MenuItem Header="As karaoke" Click="SongPlayAsKaraokeHandler"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Open" Click="SongOpenHandler"/>
+                <MenuItem Header="Save As" Click="SongSaveAsHandler"/>
+            </MenuItem>
+            <MenuItem Header="Lyrics">
+                <MenuItem Header="_Open" Click="LyricsOpenHandler"/>
+                <MenuItem Header="_Save As" Click="LyricsSaveAsHandler"/>
+            </MenuItem>
+            <MenuItem Header="Lyrics generator">
+                <MenuItem Header="_Clear" Click="LyricsGeneratorClearHandler"/>
+                <MenuItem Header="_Open" Click="LyricsGeneratorOpenHandler"/>
+                <MenuItem Header="_Save As" Click="LyricsGeneratorSaveAsHandler"/>
+            </MenuItem>
+            <MenuItem Header="Music">
+                <MenuItem Header="_Open" Click="MusicOpenHandler"/>
+                <MenuItem Header="_Save As" Click="MusicSaveAsHandler"/>
+            </MenuItem>
+            <MenuItem Header="Music generator">
+                <MenuItem Header="_Open" Click="MusicGeneratorOpenHandler"/>
+                <MenuItem Header="_Save As" Click="MusicGeneratorSaveAsHandler"/>
+            </MenuItem>
+        </Menu>
+        
+        <ToolBarPanel DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Click="SongBuildHandler">
+                    <Image Source="images/record.gif" Width="11" Height="11"/>
+                    <Button.ToolTip>Build song</Button.ToolTip>
+                </Button>
+                <Separator/>
+                <Button Click="SongPlayAsSongHandler">
+                    <Image Source="images/play.gif" Width="12" Height="11"/>
+                    <Button.ToolTip>Play as song</Button.ToolTip>
+                </Button>
+                <Separator/>
+                <Button Click="SongStopHandler">
+                    <Image Source="images/stop.gif" Width="11" Height="11"/>
+                    <Button.ToolTip>Stop</Button.ToolTip>
+                </Button>
+            </ToolBar>
+        
+            <ToolBar>
+                <Label>Bar count:</Label>
+                <Slider Name="sliderBarCount" Width="128" Minimum="1" Maximum="64" Thumb.DragDelta="EditControlHandler"/>
+                <TextBox Name="textBoxBarCount" MinWidth="32" IsReadOnly="True"/>
+                <Separator/>
+                <Label>Override tempo:</Label>
+                <Grid>
+                    <CheckBox Name="checkBoxOverrideTempo" VerticalAlignment="Center" Click="EditControlHandler" />
+                 </Grid>
+                <Label>Tempo:</Label>
+                <Slider Name="sliderTempo" Width="128" Minimum="75" Maximum="150" Thumb.DragDelta="EditControlHandler"/>
+                <TextBox Name="textBoxTempo" MinWidth="32" IsReadOnly="True"/>
+                <Separator/>
+                <Label>Override scale:</Label>
+                <Grid>
+                    <CheckBox Name="checkBoxOverrideScale" VerticalAlignment="Center" Click="EditControlHandler"/>
+                </Grid>
+                <Label>Scale:</Label>
+                <ComboBox Name="comboBoxScale" MinWidth="128" SelectionChanged="EditControlHandler"/>
+                <Separator/>
+                <Label>Modulation:</Label>
+                <Slider Name="sliderModulation" Width="128" Minimum="0" Maximum="100" Thumb.DragDelta="EditControlHandler"/>
+                <TextBox Name="textBoxModulation" MinWidth="32" IsReadOnly="True"/>
+                
+                <Separator/>
+                <Label>Override key:</Label>
+                <Grid>
+                    <CheckBox Name="checkBoxOverrideKey" VerticalAlignment="Center" Click="EditControlHandler" />
+                </Grid>
+                <Label>Default key:</Label>
+                <ComboBox Name="comboBoxDefaultKey" MinWidth="32" SelectionChanged="EditControlHandler">
+                    <ComboBoxItem>C</ComboBoxItem>
+                    <ComboBoxItem>C#</ComboBoxItem>
+                    <ComboBoxItem>D</ComboBoxItem>
+                    <ComboBoxItem>D#</ComboBoxItem>
+                    <ComboBoxItem>E</ComboBoxItem>
+                    <ComboBoxItem>F</ComboBoxItem>
+                    <ComboBoxItem>F#</ComboBoxItem>
+                    <ComboBoxItem>G</ComboBoxItem>
+                    <ComboBoxItem>G#</ComboBoxItem>
+                    <ComboBoxItem>A</ComboBoxItem>
+                    <ComboBoxItem>A#</ComboBoxItem>
+                    <ComboBoxItem>B</ComboBoxItem>
+                </ComboBox>
+                <Separator/>
+                <Label>Lyrics offset:</Label>
+                <Slider Name="sliderLyricsToMusicPhase" Width="64" Minimum="-2" Maximum="0" Thumb.DragCompleted="EditControlHandler"/>
+            </ToolBar>
+            
+            <ToolBar>
+                <Label>Language:</Label>
+                <ComboBox Name="comboBoxLanguage" SelectedIndex="0" SelectionChanged="ComboBoxLanguage_SelectionChanged">
+                    <ComboBoxItem Tag="en">english</ComboBoxItem>
+                    <ComboBoxItem Tag="fr">français</ComboBoxItem>
+                </ComboBox>
+            </ToolBar>
+        </ToolBarPanel>
+
+        <TabControl Name="tabControl">
+            <TabItem TabIndex="0" Name="metaScoreTab" Header="Generator">
+                <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <Border Grid.Row="0" Name="metaScoreBorder"/>
+                        <Border Grid.Row="1" Name="lyricGeneratorBorder"/>
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem TabIndex="1" Name="lyricsTab" Header="Lyrics">
+                <ScrollViewer>
+                    <TextBox Name="lyricsTextBox" IsReadOnly="true" />
+                </ScrollViewer>
+            </TabItem>
+            <TabItem TabIndex="2" Name="karaokeTab" Header="Karaoke">
+                
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>
